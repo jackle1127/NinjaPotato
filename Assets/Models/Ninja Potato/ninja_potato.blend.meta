@@ -1,0 +1,729 @@
+fileFormatVersion: 2
+guid: c7c1b8adf921eef488a2925d24435ea5
+timeCreated: 1492234439
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Body
+    100004: Bone
+    100006: Bone_001_R
+    100008: Bone_001_R_001
+    100010: Bone_001_R_002
+    100012: Bone_001_R_003
+    100014: Bone_001_R_004
+    100016: Bone_001_R_005
+    100018: Bone_001_R_006
+    100020: Bone_001_R_007
+    100022: Bone_002_R
+    100024: Bone_002_R_001
+    100026: Bone_002_R_002
+    100028: Bone_002_R_003
+    100030: Bone_002_R_004
+    100032: Bone_002_R_005
+    100034: Bone_002_R_006
+    100036: Bone_002_R_007
+    100038: Cube
+    100040: Cube_001
+    100042: Eyes
+    100044: Mask
+    100046: //RootNode
+    100048: Sphere
+    100050: Sheath
+    100052: Sword
+    100054: Limbs
+    100056: Sword_Trail
+    100058: Sword_Trail_Begin
+    100060: Sword_Trail_End
+    400000: Armature
+    400002: Body
+    400004: Bone
+    400006: Bone_001_R
+    400008: Bone_001_R_001
+    400010: Bone_001_R_002
+    400012: Bone_001_R_003
+    400014: Bone_001_R_004
+    400016: Bone_001_R_005
+    400018: Bone_001_R_006
+    400020: Bone_001_R_007
+    400022: Bone_002_R
+    400024: Bone_002_R_001
+    400026: Bone_002_R_002
+    400028: Bone_002_R_003
+    400030: Bone_002_R_004
+    400032: Bone_002_R_005
+    400034: Bone_002_R_006
+    400036: Bone_002_R_007
+    400038: Cube
+    400040: Cube_001
+    400042: Eyes
+    400044: Mask
+    400046: //RootNode
+    400048: Sphere
+    400050: Sheath
+    400052: Sword
+    400054: Limbs
+    400056: Sword_Trail
+    400058: Sword_Trail_Begin
+    400060: Sword_Trail_End
+    2300000: Cube_001
+    2300002: Sword
+    2300004: Sword_Trail
+    2300006: Sword_Trail_Begin
+    2300008: Sword_Trail_End
+    3300000: Cube_001
+    3300002: Sword
+    3300004: Sword_Trail
+    3300006: Sword_Trail_Begin
+    3300008: Sword_Trail_End
+    4300000: Cube_001
+    4300002: Cube
+    4300004: Sphere
+    4300006: Body
+    4300008: Mask
+    4300010: Eyes
+    4300012: Sword
+    4300014: Sheath
+    4300016: Limbs
+    4300018: Sword_Trail
+    4300020: Sword_Trail_Begin
+    4300022: Sword_Trail_End
+    7400000: Idle
+    7400002: ArmatureAction
+    7400004: Running
+    7400006: Sword Swinging
+    7400008: Jump
+    7400010: Sword Swinging Air
+    7400012: Take Damage
+    7400014: Recover
+    9500000: //RootNode
+    13700000: Body
+    13700002: Cube
+    13700004: Eyes
+    13700006: Mask
+    13700008: Sphere
+    13700010: Sheath
+    13700012: Limbs
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 19
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/Bone_001_R
+        weight: 1
+      - path: Armature/Bone/Bone_001_R/Bone_001_R_001
+        weight: 1
+      - path: Armature/Bone/Bone_001_R/Bone_001_R_001/Bone_001_R_002
+        weight: 1
+      - path: Armature/Bone/Bone_001_R/Bone_001_R_001/Bone_001_R_002/Bone_001_R_003
+        weight: 1
+      - path: Armature/Bone/Bone_001_R_004
+        weight: 1
+      - path: Armature/Bone/Bone_001_R_004/Bone_001_R_005
+        weight: 1
+      - path: Armature/Bone/Bone_001_R_004/Bone_001_R_005/Bone_001_R_006
+        weight: 1
+      - path: Armature/Bone/Bone_001_R_004/Bone_001_R_005/Bone_001_R_006/Bone_001_R_007
+        weight: 1
+      - path: Armature/Bone/Bone_002_R
+        weight: 1
+      - path: Armature/Bone/Bone_002_R/Bone_002_R_001
+        weight: 1
+      - path: Armature/Bone/Bone_002_R/Bone_002_R_001/Bone_002_R_002
+        weight: 1
+      - path: Armature/Bone/Bone_002_R/Bone_002_R_001/Bone_002_R_002/Bone_002_R_003
+        weight: 1
+      - path: Armature/Bone/Bone_002_R_004
+        weight: 1
+      - path: Armature/Bone/Bone_002_R_004/Bone_002_R_005
+        weight: 1
+      - path: Armature/Bone/Bone_002_R_004/Bone_002_R_005/Bone_002_R_006
+        weight: 1
+      - path: Armature/Bone/Bone_002_R_004/Bone_002_R_005/Bone_002_R_006/Bone_002_R_007
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: Eyes
+        weight: 1
+      - path: Limbs
+        weight: 1
+      - path: Mask
+        weight: 1
+      - path: Sheath
+        weight: 1
+      - path: Sword
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Running
+      takeName: Default Take
+      firstFrame: 39
+      lastFrame: 59
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/Bone_001_R
+        weight: 1
+      - path: Armature/Bone/Bone_001_R/Bone_001_R_001
+        weight: 1
+      - path: Armature/Bone/Bone_001_R/Bone_001_R_001/Bone_001_R_002
+        weight: 1
+      - path: Armature/Bone/Bone_001_R/Bone_001_R_001/Bone_001_R_002/Bone_001_R_003
+        weight: 1
+      - path: Armature/Bone/Bone_001_R_004
+        weight: 1
+      - path: Armature/Bone/Bone_001_R_004/Bone_001_R_005
+        weight: 1
+      - path: Armature/Bone/Bone_001_R_004/Bone_001_R_005/Bone_001_R_006
+        weight: 1
+      - path: Armature/Bone/Bone_001_R_004/Bone_001_R_005/Bone_001_R_006/Bone_001_R_007
+        weight: 1
+      - path: Armature/Bone/Bone_002_R
+        weight: 1
+      - path: Armature/Bone/Bone_002_R/Bone_002_R_001
+        weight: 1
+      - path: Armature/Bone/Bone_002_R/Bone_002_R_001/Bone_002_R_002
+        weight: 1
+      - path: Armature/Bone/Bone_002_R/Bone_002_R_001/Bone_002_R_002/Bone_002_R_003
+        weight: 1
+      - path: Armature/Bone/Bone_002_R_004
+        weight: 1
+      - path: Armature/Bone/Bone_002_R_004/Bone_002_R_005
+        weight: 1
+      - path: Armature/Bone/Bone_002_R_004/Bone_002_R_005/Bone_002_R_006
+        weight: 1
+      - path: Armature/Bone/Bone_002_R_004/Bone_002_R_005/Bone_002_R_006/Bone_002_R_007
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: Eyes
+        weight: 1
+      - path: Limbs
+        weight: 1
+      - path: Mask
+        weight: 1
+      - path: Sheath
+        weight: 1
+      - path: Sword
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Sword Swinging
+      takeName: Default Take
+      firstFrame: 79
+      lastFrame: 119
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/Bone_001_R
+        weight: 1
+      - path: Armature/Bone/Bone_001_R/Bone_001_R_001
+        weight: 1
+      - path: Armature/Bone/Bone_001_R/Bone_001_R_001/Bone_001_R_002
+        weight: 1
+      - path: Armature/Bone/Bone_001_R/Bone_001_R_001/Bone_001_R_002/Bone_001_R_003
+        weight: 1
+      - path: Armature/Bone/Bone_001_R_004
+        weight: 1
+      - path: Armature/Bone/Bone_001_R_004/Bone_001_R_005
+        weight: 1
+      - path: Armature/Bone/Bone_001_R_004/Bone_001_R_005/Bone_001_R_006
+        weight: 1
+      - path: Armature/Bone/Bone_001_R_004/Bone_001_R_005/Bone_001_R_006/Bone_001_R_007
+        weight: 1
+      - path: Armature/Bone/Bone_002_R
+        weight: 1
+      - path: Armature/Bone/Bone_002_R/Bone_002_R_001
+        weight: 1
+      - path: Armature/Bone/Bone_002_R/Bone_002_R_001/Bone_002_R_002
+        weight: 1
+      - path: Armature/Bone/Bone_002_R/Bone_002_R_001/Bone_002_R_002/Bone_002_R_003
+        weight: 1
+      - path: Armature/Bone/Bone_002_R_004
+        weight: 1
+      - path: Armature/Bone/Bone_002_R_004/Bone_002_R_005
+        weight: 1
+      - path: Armature/Bone/Bone_002_R_004/Bone_002_R_005/Bone_002_R_006
+        weight: 1
+      - path: Armature/Bone/Bone_002_R_004/Bone_002_R_005/Bone_002_R_006/Bone_002_R_007
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: Eyes
+        weight: 1
+      - path: Limbs
+        weight: 1
+      - path: Mask
+        weight: 1
+      - path: Sheath
+        weight: 1
+      - path: Sword
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Jump
+      takeName: Default Take
+      firstFrame: 139
+      lastFrame: 159
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/Bone_001_R
+        weight: 1
+      - path: Armature/Bone/Bone_001_R/Bone_001_R_001
+        weight: 1
+      - path: Armature/Bone/Bone_001_R/Bone_001_R_001/Bone_001_R_002
+        weight: 1
+      - path: Armature/Bone/Bone_001_R/Bone_001_R_001/Bone_001_R_002/Bone_001_R_003
+        weight: 1
+      - path: Armature/Bone/Bone_001_R_004
+        weight: 1
+      - path: Armature/Bone/Bone_001_R_004/Bone_001_R_005
+        weight: 1
+      - path: Armature/Bone/Bone_001_R_004/Bone_001_R_005/Bone_001_R_006
+        weight: 1
+      - path: Armature/Bone/Bone_001_R_004/Bone_001_R_005/Bone_001_R_006/Bone_001_R_007
+        weight: 1
+      - path: Armature/Bone/Bone_002_R
+        weight: 1
+      - path: Armature/Bone/Bone_002_R/Bone_002_R_001
+        weight: 1
+      - path: Armature/Bone/Bone_002_R/Bone_002_R_001/Bone_002_R_002
+        weight: 1
+      - path: Armature/Bone/Bone_002_R/Bone_002_R_001/Bone_002_R_002/Bone_002_R_003
+        weight: 1
+      - path: Armature/Bone/Bone_002_R_004
+        weight: 1
+      - path: Armature/Bone/Bone_002_R_004/Bone_002_R_005
+        weight: 1
+      - path: Armature/Bone/Bone_002_R_004/Bone_002_R_005/Bone_002_R_006
+        weight: 1
+      - path: Armature/Bone/Bone_002_R_004/Bone_002_R_005/Bone_002_R_006/Bone_002_R_007
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: Eyes
+        weight: 1
+      - path: Limbs
+        weight: 1
+      - path: Mask
+        weight: 1
+      - path: Sheath
+        weight: 1
+      - path: Sword
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Sword Swinging Air
+      takeName: Default Take
+      firstFrame: 179
+      lastFrame: 199
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/Bone_001_R
+        weight: 1
+      - path: Armature/Bone/Bone_001_R/Bone_001_R_001
+        weight: 1
+      - path: Armature/Bone/Bone_001_R/Bone_001_R_001/Bone_001_R_002
+        weight: 1
+      - path: Armature/Bone/Bone_001_R/Bone_001_R_001/Bone_001_R_002/Bone_001_R_003
+        weight: 1
+      - path: Armature/Bone/Bone_001_R_004
+        weight: 1
+      - path: Armature/Bone/Bone_001_R_004/Bone_001_R_005
+        weight: 1
+      - path: Armature/Bone/Bone_001_R_004/Bone_001_R_005/Bone_001_R_006
+        weight: 1
+      - path: Armature/Bone/Bone_001_R_004/Bone_001_R_005/Bone_001_R_006/Bone_001_R_007
+        weight: 1
+      - path: Armature/Bone/Bone_002_R
+        weight: 1
+      - path: Armature/Bone/Bone_002_R/Bone_002_R_001
+        weight: 1
+      - path: Armature/Bone/Bone_002_R/Bone_002_R_001/Bone_002_R_002
+        weight: 1
+      - path: Armature/Bone/Bone_002_R/Bone_002_R_001/Bone_002_R_002/Bone_002_R_003
+        weight: 1
+      - path: Armature/Bone/Bone_002_R_004
+        weight: 1
+      - path: Armature/Bone/Bone_002_R_004/Bone_002_R_005
+        weight: 1
+      - path: Armature/Bone/Bone_002_R_004/Bone_002_R_005/Bone_002_R_006
+        weight: 1
+      - path: Armature/Bone/Bone_002_R_004/Bone_002_R_005/Bone_002_R_006/Bone_002_R_007
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: Eyes
+        weight: 1
+      - path: Limbs
+        weight: 1
+      - path: Mask
+        weight: 1
+      - path: Sheath
+        weight: 1
+      - path: Sword
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Take Damage
+      takeName: Default Take
+      firstFrame: 219
+      lastFrame: 239
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/Bone_001_R
+        weight: 1
+      - path: Armature/Bone/Bone_001_R/Bone_001_R_001
+        weight: 1
+      - path: Armature/Bone/Bone_001_R/Bone_001_R_001/Bone_001_R_002
+        weight: 1
+      - path: Armature/Bone/Bone_001_R/Bone_001_R_001/Bone_001_R_002/Bone_001_R_003
+        weight: 1
+      - path: Armature/Bone/Bone_001_R_004
+        weight: 1
+      - path: Armature/Bone/Bone_001_R_004/Bone_001_R_005
+        weight: 1
+      - path: Armature/Bone/Bone_001_R_004/Bone_001_R_005/Bone_001_R_006
+        weight: 1
+      - path: Armature/Bone/Bone_001_R_004/Bone_001_R_005/Bone_001_R_006/Bone_001_R_007
+        weight: 1
+      - path: Armature/Bone/Bone_002_R
+        weight: 1
+      - path: Armature/Bone/Bone_002_R/Bone_002_R_001
+        weight: 1
+      - path: Armature/Bone/Bone_002_R/Bone_002_R_001/Bone_002_R_002
+        weight: 1
+      - path: Armature/Bone/Bone_002_R/Bone_002_R_001/Bone_002_R_002/Bone_002_R_003
+        weight: 1
+      - path: Armature/Bone/Bone_002_R_004
+        weight: 1
+      - path: Armature/Bone/Bone_002_R_004/Bone_002_R_005
+        weight: 1
+      - path: Armature/Bone/Bone_002_R_004/Bone_002_R_005/Bone_002_R_006
+        weight: 1
+      - path: Armature/Bone/Bone_002_R_004/Bone_002_R_005/Bone_002_R_006/Bone_002_R_007
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: Eyes
+        weight: 1
+      - path: Limbs
+        weight: 1
+      - path: Mask
+        weight: 1
+      - path: Sheath
+        weight: 1
+      - path: Sword
+        weight: 1
+      - path: Sword/Sword_Trail_Begin
+        weight: 1
+      - path: Sword/Sword_Trail_End
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Recover
+      takeName: Default Take
+      firstFrame: 259
+      lastFrame: 284
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/Bone_001_R
+        weight: 1
+      - path: Armature/Bone/Bone_001_R/Bone_001_R_001
+        weight: 1
+      - path: Armature/Bone/Bone_001_R/Bone_001_R_001/Bone_001_R_002
+        weight: 1
+      - path: Armature/Bone/Bone_001_R/Bone_001_R_001/Bone_001_R_002/Bone_001_R_003
+        weight: 1
+      - path: Armature/Bone/Bone_001_R_004
+        weight: 1
+      - path: Armature/Bone/Bone_001_R_004/Bone_001_R_005
+        weight: 1
+      - path: Armature/Bone/Bone_001_R_004/Bone_001_R_005/Bone_001_R_006
+        weight: 1
+      - path: Armature/Bone/Bone_001_R_004/Bone_001_R_005/Bone_001_R_006/Bone_001_R_007
+        weight: 1
+      - path: Armature/Bone/Bone_002_R
+        weight: 1
+      - path: Armature/Bone/Bone_002_R/Bone_002_R_001
+        weight: 1
+      - path: Armature/Bone/Bone_002_R/Bone_002_R_001/Bone_002_R_002
+        weight: 1
+      - path: Armature/Bone/Bone_002_R/Bone_002_R_001/Bone_002_R_002/Bone_002_R_003
+        weight: 1
+      - path: Armature/Bone/Bone_002_R_004
+        weight: 1
+      - path: Armature/Bone/Bone_002_R_004/Bone_002_R_005
+        weight: 1
+      - path: Armature/Bone/Bone_002_R_004/Bone_002_R_005/Bone_002_R_006
+        weight: 1
+      - path: Armature/Bone/Bone_002_R_004/Bone_002_R_005/Bone_002_R_006/Bone_002_R_007
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: Eyes
+        weight: 1
+      - path: Limbs
+        weight: 1
+      - path: Mask
+        weight: 1
+      - path: Sheath
+        weight: 1
+      - path: Sword
+        weight: 1
+      - path: Sword/Sword_Trail_Begin
+        weight: 1
+      - path: Sword/Sword_Trail_End
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
