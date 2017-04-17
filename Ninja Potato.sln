@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ninja Potato", "Assembly-CSharp.csproj", "{FBE6D8C9-BDF4-C447-27FC-134AC9454469}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FBE6D8C9-BDF4-C447-27FC-134AC9454469}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBE6D8C9-BDF4-C447-27FC-134AC9454469}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBE6D8C9-BDF4-C447-27FC-134AC9454469}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBE6D8C9-BDF4-C447-27FC-134AC9454469}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
