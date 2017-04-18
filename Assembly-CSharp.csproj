@@ -47,21 +47,27 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\CameraController.cs" />
-     <Compile Include="Assets\Scripts\Enemy.cs" />
-     <Compile Include="Assets\Scripts\EnemyTrigger.cs" />
+     <Compile Include="Assets\Scripts\Enemies\EnemyController.cs" />
+     <Compile Include="Assets\Scripts\Enemies\EnemyTrigger.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Pineapple\PineappleCollider.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Pineapple\PineappleController.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Pineapple\PineappleDamageTrigger.cs" />
      <Compile Include="Assets\Scripts\MapToPlayerTrigger.cs" />
-     <Compile Include="Assets\Scripts\PineappleController.cs" />
-     <Compile Include="Assets\Scripts\PineappleDamageTrigger.cs" />
-     <Compile Include="Assets\Scripts\PlayerAnimationController.cs" />
-     <Compile Include="Assets\Scripts\PlayerBottomTrigger.cs" />
-     <Compile Include="Assets\Scripts\PlayerCollider.cs" />
-     <Compile Include="Assets\Scripts\PlayerController.cs" />
-     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
-     <Compile Include="Assets\Scripts\PlayerSideTrigger.cs" />
-     <Compile Include="Assets\Scripts\PlayerSwordTrigger.cs" />
-     <Compile Include="Assets\Scripts\PlayerTrigger.cs" />
-     <Compile Include="Assets\Scripts\SwordTrail.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerAnimationController.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerBottomTrigger.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerCollider.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerSideTrigger.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerSwordTrail.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerSwordTrigger.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerTrigger.cs" />
+     <Compile Include="Assets\Scripts\Sprite Generator\ScreenFlasher.cs" />
+     <Compile Include="Assets\Scripts\Sprite Generator\Spark.cs" />
+     <Compile Include="Assets\Scripts\Sprite Generator\SpriteGenerator.cs" />
+     <None Include="Assets\Sprites\Sprite.shader" />
      <None Include="Assets\Models\Ninja Potato\Sword Trail.shader" />
+     <None Include="Assets\Models\Ninja Potato\Sword.shader" />
      <None Include="Assets\Models\Ninja Potato\Mask.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
