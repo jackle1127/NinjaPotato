@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scripts\PlayerSideTrigger.cs" />
      <Compile Include="Assets\Scripts\PlayerSwordTrigger.cs" />
      <Compile Include="Assets\Scripts\PlayerTrigger.cs" />
+     <Compile Include="Assets\Scripts\Rotator.cs" />
      <Compile Include="Assets\Scripts\SwordTrail.cs" />
      <None Include="Assets\Models\Ninja Potato\Sword Trail.shader" />
      <None Include="Assets\Models\Ninja Potato\Mask.shader" />
