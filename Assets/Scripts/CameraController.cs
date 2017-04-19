@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraController : MonoBehaviour {
     public GameObject player;
     public float alpha;
-
+    public Transform cameraLeftBound, cameraRightBound;
     private GameObject playerTarget;
 
 	// Use this for initialization
@@ -15,7 +15,10 @@ public class CameraController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        transform.position += alpha * (player.transform.position - playerTarget.transform.position);
+        Vector3 cameraPosition = transform.position;
+        cameraPosition += alpha * (player.transform.position - playerTarget.transform.position);
+        cameraPosition.x = Mathf.Clamp(cameraPosition.x, cameraRightBound.position.x, cameraLeftBound.position.x);
+        transform.position = cameraPosition;
 	}
 
     public void FaceRight() {

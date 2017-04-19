@@ -8,11 +8,13 @@ public class PineappleController : EnemyController {
 	public float energyThreshold;
 	public float bounceBackMultiplier;
 	public int framesAfterDeath;
-	public Transform playerTransform;
 	public float sparkDimAlpha;
 	public float sparkSize;
 	public Transform sparkPosition;
-	private bool alive = true;
+    
+    [HideInInspector]
+    public Transform playerTransform;
+    private bool alive = true;
 	private Animator animator;
 	private float currentScale;
 
@@ -25,11 +27,13 @@ public class PineappleController : EnemyController {
 	
 	void FixedUpdate () {
 		if (alive) {
-			if (playerTransform.position.x > transform.position.x) {
-				transform.localScale = new Vector3 (-currentScale, currentScale, currentScale);
-			} else {
-				transform.localScale = new Vector3 (currentScale, currentScale, currentScale);
-			}
+            if (playerTransform != null) {
+                if (playerTransform.position.x > transform.position.x) {
+                    transform.localScale = new Vector3(-currentScale, currentScale, currentScale);
+                } else {
+                    transform.localScale = new Vector3(currentScale, currentScale, currentScale);
+                }
+            }
 		} else {
 			if (framesAfterDeath > 0) {
 				framesAfterDeath--;
@@ -44,12 +48,6 @@ public class PineappleController : EnemyController {
 			// Player Collider is child of the player object where the Player Controller is.
 			playerCollider.transform.parent.GetComponent<PlayerController> ()
 				.TakeDamage (gameObject, damage, playerBounceBackStrength);
-		}
-	}
-
-	public void OnTriggerEnter2D(Collider2D collider) {
-		if (collider.gameObject.tag == "Player Trigger") {
-			collider.gameObject.GetComponent<PlayerTrigger> ().signalPlayerIn (gameObject);
 		}
 	}
 

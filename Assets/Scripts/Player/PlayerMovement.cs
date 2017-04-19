@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour {
     public float maxSpeed;
     public float speedAlpha;
     public float airAcceleration;
+    public float yVelocityAlpha;
     public float jumpPower;
     public float jumpThreshold;
     public float swordAlpha;
@@ -77,6 +78,10 @@ public class PlayerMovement : MonoBehaviour {
 				grounded = false;
 				animationController.StartJump ();
 			}
+
+            if (!grounded && verticalInput < jumpThreshold && currentVelocity.y > 0) {
+                currentVelocity.y *= (1 - yVelocityAlpha);
+            }
 
 			if (grounded) {
 				animationController.jumpTarget = 0;
