@@ -15,7 +15,8 @@ public class PlayerMovement : MonoBehaviour {
     public Transform wallKickSparkPosition;
     public float wallKickDimAlpha, wallKickSparkSize;
     public Vector2 wallKickRight;
-
+	public float minSwordWooshDeltaAngle;
+	public float maxSwordWooshDeltaAngle;
     [HideInInspector]
     public bool grounded, touchingWall;
     [HideInInspector]
@@ -36,6 +37,8 @@ public class PlayerMovement : MonoBehaviour {
     private PlayerSwordTrail swordTrail;
     private int frameOnGround;
     private SpriteGenerator spriteGenerator;
+	private AudioManager audioManager;
+	public bool swordWooshed;
 
 	// Use this for initialization
 	void Start () {
@@ -45,6 +48,7 @@ public class PlayerMovement : MonoBehaviour {
         wallKickLeft.x = -wallKickLeft.x;
         swordTrail = GetComponentInChildren<PlayerSwordTrail>();
         spriteGenerator = GameObject.FindGameObjectWithTag("Sprite Generator").GetComponent<SpriteGenerator>();
+		audioManager = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<AudioManager>();
 	}
 	
 	// Update is called once per frame
@@ -112,6 +116,13 @@ public class PlayerMovement : MonoBehaviour {
 
 				// Calculate sword energy to use to calculate damage on enemy in the Player Controller.
 				swordDeltaAngle = Mathf.Deg2Rad * Mathf.DeltaAngle (Mathf.Rad2Deg * currentSwordAngle, Mathf.Rad2Deg * newSwordAngle);
+				bool swordJustSwooshed = Mathf.Abs(swordDeltaAngle) >= minSwordWooshDeltaAngle;
+				if (!swordWooshed && swordJustSwooshed) {
+					audioManager.playSwordWoosh(Mathf.Lerp(0, 1, 
+						Mathf.Clamp01((swordDeltaAngle - minSwordWooshDeltaAngle) /
+							(maxSwordWooshDeltaAngle - minSwordWooshDeltaAngle))));
+				}
+				swordWooshed = swordJustSwooshed;
 
 				currentSwordAngle = newSwordAngle;
 				animationController.airMode = !grounded;
@@ -133,12 +144,14 @@ public class PlayerMovement : MonoBehaviour {
                             spriteGenerator.Spark(1, wallKickSparkPosition.position, new Quaternion(0, 0, 0, 1), wallKickSparkSize, wallKickDimAlpha);
                             rB.velocity = wallKickRight;
 							FaceLeft ();
+							audioManager.playWallKick ();
 						}
 					} else {
 						if (horizontalInput > 0) {
                             spriteGenerator.Spark(1, wallKickSparkPosition.position, new Quaternion(0, 0, 1, 0), wallKickSparkSize, wallKickDimAlpha);
                             rB.velocity = wallKickLeft;
 							FaceRight ();
+							audioManager.playWallKick ();
                         }
 					}
 				}

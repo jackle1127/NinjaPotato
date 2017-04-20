@@ -63,6 +63,7 @@ public class PineappleController : EnemyController {
 			GetComponent<Rigidbody2D> ().velocity = bounceBack;
 			animator.SetLayerWeight (1, 1);
 			animator.Play ("Dying", 1, 0);
+			audioManager.playSwordHit ();
 		}
 	}
 }

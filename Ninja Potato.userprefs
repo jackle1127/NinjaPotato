@@ -1,17 +1,20 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Enemies\Pineapple\PineappleController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\HealthIndicator.cs">
     <Files>
       <File FileName="Assets\Scripts\Player\PlayerAnimationController.cs" Line="16" Column="1" />
-      <File FileName="Assets\Scripts\Player\PlayerController.cs" Line="49" Column="60" />
-      <File FileName="Assets\Scripts\Player\PlayerMovement.cs" Line="52" Column="40" />
-      <File FileName="Assets\Scripts\Enemies\Pineapple\PineappleController.cs" Line="61" Column="43" />
-      <File FileName="Assets\Scripts\Player\PlayerSwordTrail.cs" Line="25" Column="34" />
-      <File FileName="Assets\Scripts\Sprite Generator\ScreenFlasher.cs" Line="32" Column="1" />
-      <File FileName="Assets\Scripts\Enemies\EnemyController.cs" Line="19" Column="36" />
-      <File FileName="Assets\Scripts\Sprite Generator\Spark.cs" Line="18" Column="18" />
-      <File FileName="Assets\Scripts\Sprite Generator\SpriteGenerator.cs" Line="20" Column="63" />
-      <File FileName="Assets\Sprites\Sprite.shader" Line="15" Column="11" />
+      <File FileName="Assets\Scripts\Player\PlayerController.cs" Line="21" Column="57" />
+      <File FileName="Assets\Scripts\Player\PlayerMovement.cs" Line="123" Column="62" />
+      <File FileName="Assets\Scripts\Environment\GameManager.cs" Line="42" Column="25" />
+      <File FileName="Assets\Scripts\Environment\EnvironmentController.cs" Line="6" Column="29" />
+      <File FileName="Assets\Scripts\Items\HeartTrigger.cs" Line="11" Column="1" />
+      <File FileName="Assets\Scripts\Player\PlayerCollider.cs" Line="22" Column="65" />
+      <File FileName="Assets\Scripts\Items\ItemTrigger.cs" Line="7" Column="24" />
+      <File FileName="Assets\Scripts\Rotator.cs" Line="14" Column="46" />
+      <File FileName="Assets\Scripts\Environment\AudioManager.cs" Line="22" Column="30" />
+      <File FileName="Assets\Scripts\Enemies\Pineapple\PineappleController.cs" Line="66" Column="33" />
+      <File FileName="Assets\Scripts\Enemies\EnemyController.cs" Line="11" Column="1" />
+      <File FileName="Assets\Scripts\HealthIndicator.cs" Line="17" Column="65" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -7,9 +7,11 @@ public abstract class EnemyController : MonoBehaviour {
 	public Color screenFlashColor;
 	public float screenFlashDimAlpha;
 	protected SpriteGenerator spriteGenerator;
+	protected AudioManager audioManager;
 
 	public virtual void Start() {
 		spriteGenerator = GameObject.FindGameObjectWithTag ("Sprite Generator").GetComponent<SpriteGenerator> ();
+		audioManager = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<AudioManager>();
 	}
 
 	public void Despawn() {

@@ -10,13 +10,24 @@ public class PlayerController : MonoBehaviour {
 
     private PlayerMovement playerMovement;
 	private SpriteGenerator spriteGenerator;
+	private GameManager gameManager;
+	private AudioManager audioManager;
 
 	// Use this for initialization
 	void Start () {
+		gameManager = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<GameManager>();
+		audioManager = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<AudioManager>();
+        spriteGenerator = GameObject.FindGameObjectWithTag("Sprite Generator").GetComponent<SpriteGenerator>();
         playerMovement = GetComponent<PlayerMovement>();
-		spriteGenerator = GameObject.FindGameObjectWithTag ("Sprite Generator").GetComponent<SpriteGenerator> ();
 	}
-	
+
+	void Update() {
+		if (playerMovement.damageState == 3 && hp <= 0) {
+			this.enabled = false;
+			gameManager.Die ();
+		}
+	}
+
 	public void TakeDamage(GameObject enemy, float amount, float bounceBackStrength) {
 		if (playerMovement.damageState == 0) {
 			hp -= amount;
@@ -24,6 +35,7 @@ public class PlayerController : MonoBehaviour {
 			bounceBack = bounceBack.normalized * bounceBackStrength;
 			GetComponent<PlayerMovement> ().TakeDamage (bounceBack);
 			spriteGenerator.FlashScreen (damageScreenFlash, -1, dimAlpha);
+			audioManager.playPlayerHit ();
 		}
 	}
 
@@ -48,5 +60,9 @@ public class PlayerController : MonoBehaviour {
 			// Use delta angle as energy
 			hitObject.GetComponent<EnemyController> ().DamageEnemy (Mathf.Abs(playerMovement.swordDeltaAngle), damageDirection);
 		}
+	}
+
+	public void Heal(float amount) {
+		hp = Mathf.Clamp (hp + amount, 0, 100);
 	}
 }

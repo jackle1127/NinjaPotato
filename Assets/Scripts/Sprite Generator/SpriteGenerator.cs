@@ -17,6 +17,10 @@ public class SpriteGenerator : MonoBehaviour {
 		screenFlasher.Flash (color, startingAlpha, dimAlpha);
 	}
 
+    public void FadeTo(Color color, float startingAlpha, float targetAlpha, float changeAlpha) {
+        screenFlasher.FadeTo(color, startingAlpha, targetAlpha, changeAlpha);
+    }
+
 	public void Spark(int sparkType, Vector3 position, Quaternion rotation, float size, float dimAlpha) {
 		GameObject newSpark = Instantiate (sparkPrefabs [sparkType]);
 		newSpark.transform.position = position;
