@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour {
         spriteGenerator = GameObject.FindGameObjectWithTag("Sprite Generator").GetComponent<SpriteGenerator>();
 	}
 
-	void Update() {
+	void FixedUpdate() {
 		if (mode != 0) {
 			// Disable movement.
 			player.GetComponent<PlayerMovement> ().enabled = false;

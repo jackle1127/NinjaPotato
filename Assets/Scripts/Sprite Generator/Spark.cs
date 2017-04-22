@@ -12,7 +12,7 @@ public class Spark : MonoBehaviour {
 	}
 
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		if (alpha > despawnAlpha) {
 			alpha = (1 - dimAlpha) * alpha;
 			material.color = new Color (1, 1, 1, alpha);

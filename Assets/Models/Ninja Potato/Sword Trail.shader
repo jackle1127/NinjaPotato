@@ -1,41 +1,67 @@
-﻿Shader "Custom/SwordTrail" {
-	Properties {
-		_Color ("Color", Color) = (1,1,1,1)
+﻿Shader "Unlit/Sword"
+{
+	Properties
+	{
 		_MainTex ("Texture", 2D) = "white" {}
+		_TintMap ("Texture", 2D) = "white" {}
+		_Color ("Tint", Color) = (1, 1, 1, 1)
 	}
-	SubShader {
-		Tags {"Queue"="Transparent" "RenderType"="Fade" }
-		LOD 200
-		Blend SrcAlpha OneMinusSrcAlpha
-		Cull Off
+	SubShader
+	{
+		Tags {"Queue"="Transparent" "RenderType"="Opaque" }
+		LOD 100
 		ZWrite Off
+		Cull Off
+		Blend SrcAlpha OneMinusSrcAlpha
 
-		CGPROGRAM
-		// Physically based Standard lighting model, and enable shadows on all light types
-		#pragma surface surf Standard fullforwardshadows alpha
+		Pass
+		{
+			CGPROGRAM
+			#pragma vertex vert
+			#pragma fragment frag
+			// make fog work
+			#pragma multi_compile_fog
+			
+			#include "UnityCG.cginc"
 
-		// Use shader model 3.0 target, to get nicer looking lighting
-		#pragma target 3.0
+			struct appdata
+			{
+				float4 vertex : POSITION;
+				float2 uv : TEXCOORD0;
+			};
 
-		sampler2D _MainTex;
+			struct v2f
+			{
+				float2 uv : TEXCOORD0;
+				UNITY_FOG_COORDS(1)
+				float4 vertex : SV_POSITION;
+			};
 
-		struct Input {
-			float2 uv_MainTex;
-		};
-
-		fixed4 _Color;
-
-		void surf (Input IN, inout SurfaceOutputStandard o) {
-			fixed4 textureColor = tex2D(_MainTex, IN.uv_MainTex);
-			float alpha = textureColor.a * (textureColor.r + textureColor.g + textureColor.b) / 3;
-			alpha *= alpha;
- 			o.Emission = textureColor.rgb;
-			o.Alpha = alpha;
-			o.Albedo = textureColor;
-			o.Metallic = 0;
-			o.Smoothness = 0;
+			sampler2D _MainTex;
+			sampler2D _TintMap;
+			float4 _MainTex_ST;
+			float4 _Color;
+			
+			v2f vert (appdata v)
+			{
+				v2f o;
+				o.vertex = UnityObjectToClipPos(v.vertex);
+				o.uv = TRANSFORM_TEX(v.uv, _MainTex);
+				UNITY_TRANSFER_FOG(o,o.vertex);
+				return o;
+			}
+			
+			fixed4 frag (v2f i) : SV_Target
+			{
+				// Use the red channel for the map.
+				fixed4 tint = lerp(fixed4(1, 1, 1, 1), _Color, tex2D(_TintMap, i.uv).r);
+				tint.a = _Color.a;
+				fixed4 col = tex2D(_MainTex, i.uv) * tint;
+				// apply fog
+				UNITY_APPLY_FOG(i.fogCoord, col);
+				return col;
+			}
+			ENDCG
 		}
-		ENDCG
 	}
-	FallBack "Diffuse"
 }

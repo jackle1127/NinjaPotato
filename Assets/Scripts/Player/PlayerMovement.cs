@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour {
     public Vector2 wallKickRight;
 	public float minSwordWooshDeltaAngle;
 	public float maxSwordWooshDeltaAngle;
+	public PlayerSwordTrail swordTrail;
     [HideInInspector]
     public bool grounded, touchingWall;
     [HideInInspector]
@@ -34,7 +35,6 @@ public class PlayerMovement : MonoBehaviour {
     private PlayerAnimationController animationController;
     private Vector2 wallKickLeft;
     private bool swordWasActivated = false;
-    private PlayerSwordTrail swordTrail;
     private int frameOnGround;
     private SpriteGenerator spriteGenerator;
 	private AudioManager audioManager;
@@ -46,13 +46,12 @@ public class PlayerMovement : MonoBehaviour {
         animationController = GetComponent<PlayerAnimationController>();
         wallKickLeft = wallKickRight;
         wallKickLeft.x = -wallKickLeft.x;
-        swordTrail = GetComponentInChildren<PlayerSwordTrail>();
         spriteGenerator = GameObject.FindGameObjectWithTag("Sprite Generator").GetComponent<SpriteGenerator>();
 		audioManager = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<AudioManager>();
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		if (damageState == 0) {
 			float horizontalInput = Input.GetAxisRaw ("Horizontal");
 			float verticalInput = Input.GetAxisRaw ("Vertical");
@@ -118,8 +117,8 @@ public class PlayerMovement : MonoBehaviour {
 				swordDeltaAngle = Mathf.Deg2Rad * Mathf.DeltaAngle (Mathf.Rad2Deg * currentSwordAngle, Mathf.Rad2Deg * newSwordAngle);
 				bool swordJustSwooshed = Mathf.Abs(swordDeltaAngle) >= minSwordWooshDeltaAngle;
 				if (!swordWooshed && swordJustSwooshed) {
-					audioManager.playSwordWoosh(Mathf.Lerp(0, 1, 
-						Mathf.Clamp01((swordDeltaAngle - minSwordWooshDeltaAngle) /
+					audioManager.playSwordWoosh(Mathf.Lerp(0, 1,
+                        Mathf.Clamp01((Mathf.Abs(swordDeltaAngle) - minSwordWooshDeltaAngle) /
 							(maxSwordWooshDeltaAngle - minSwordWooshDeltaAngle))));
 				}
 				swordWooshed = swordJustSwooshed;
@@ -192,8 +191,12 @@ public class PlayerMovement : MonoBehaviour {
 				animationController.takeDamageAlpha = 0;
 			}
 		}
-	}
 
+		// Slow down when touching the ground (damageState 2 and 3).
+		if (grounded && damageState >= 2) {
+			rB.velocity *= (1 - speedAlpha);
+		}
+	}
 
     private void FaceRight() {
         transform.localScale = new Vector3(1, 1, 1);

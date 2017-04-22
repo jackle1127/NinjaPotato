@@ -14,7 +14,7 @@ public class ScreenFlasher : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		if (image.color.a != target) {
 			Color color = image.color;
 			color.a += (target - color.a) * changeAlpha;

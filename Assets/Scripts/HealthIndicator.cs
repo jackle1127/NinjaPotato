@@ -13,7 +13,7 @@ public class HealthIndicator : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		slider.value += (player.hp - slider.value) * healthChangeAlpha;
 	}
 }

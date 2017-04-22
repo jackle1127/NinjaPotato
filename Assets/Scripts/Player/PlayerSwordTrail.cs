@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class PlayerSwordTrail : MonoBehaviour {
     public float trailAlpha;
+	public float followAlpha;
     public Transform trailBegin;
     public Transform trailEnd;
+	public Transform player;
 
-    private int numOfNodes;
+	private int numOfNodes;
     private Mesh mesh;
     private Vector3[] vertices;
 
@@ -18,16 +20,22 @@ public class PlayerSwordTrail : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-        vertices = mesh.vertices;
-        vertices[0] = trailBegin.position - transform.position;
-        vertices[1] = trailEnd.position - transform.position;
-        vertices[0].x /= transform.lossyScale.x;
+	void Update() {
+		vertices = mesh.vertices;
+		vertices[0] = trailBegin.position - transform.position;
+		vertices[1] = trailEnd.position - transform.position;
+		mesh.vertices = vertices;
+	}
+
+	void FixedUpdate () {
+		transform.position += (player.position - transform.position) * followAlpha;
+		vertices = mesh.vertices;
+        /*vertices[0].x /= transform.lossyScale.x;
         vertices[0].y /= transform.lossyScale.y;
         vertices[0].z /= transform.lossyScale.z;
         vertices[1].x /= transform.lossyScale.x;
         vertices[1].y /= transform.lossyScale.y;
-        vertices[1].z /= transform.lossyScale.z;
+        vertices[1].z /= transform.lossyScale.z;*/
 
         for (int i = numOfNodes - 1; i > 0; i--) {
             int currentIndex = i * 2;

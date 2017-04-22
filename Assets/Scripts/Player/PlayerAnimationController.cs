@@ -20,7 +20,7 @@ public class PlayerAnimationController : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         AnimateLayerWeight(runTarget, ref runAlpha);
         AnimateLayerWeight(jumpTarget, ref jumpAlpha);
 
